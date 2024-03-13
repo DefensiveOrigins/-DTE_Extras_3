@@ -215,3 +215,31 @@ DSADD user -upn Byron.Lawrence@dteclass.com "cn=Byron.Lawrence,ou=UserAccounts,d
 DSADD user -upn Marion.Gonzalez@dteclass.com "cn=Marion.Gonzalez,ou=UserAccounts,dc=dteclass,dc=com" -fn "Marion" -ln "Gonzalez" -disabled no -display "Marion Gonzalez" -desc "Nano Spectral Sagittarius Government Service Executive" -office "DevLabs Nano Spectral Sagittarius" -title "Government Service Executive" -company "DevLabs" -PWD "Badpass62004"
 DSADD user -upn Gerald.Wade@dteclass.com "cn=Gerald.Wade,ou=UserAccounts,dc=dteclass,dc=com" -fn "Gerald" -ln "Wade" -disabled no -display "Gerald Wade" -desc "Nano Spectral Sagittarius City Alderman" -office "DevLabs Nano Spectral Sagittarius" -title "City Alderman" -company "DevLabs" -PWD "Badpass35101"
 DSADD user -upn Donna.Garner@dteclass.com "cn=Donna.Garner,ou=UserAccounts,dc=dteclass,dc=com" -fn "Donna" -ln "Garner" -disabled no -display "Donna Garner" -desc "Compu Matrix M City Council Member" -office "DevLabs Compu Matrix M" -title "City Council Member" -company "DevLabs" -PWD "Badpass63050"
+
+New-ADComputer -Name "SRV100" -SamAccountName "SRV100" -Path "OU=ComputerAccounts,DC=dteclass,DC=COM"
+
+New-ADUser -UserPrincipalName 'Braylen.Ewing@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Braylen' -Surname 'Ewing' -Enabled 1 -Name 'Braylen.Ewing' -AccountPassword (ConvertTo-SecureString 'qwertyuiopDE#'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Emelia.Chaney@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Emelia' -Surname 'Chaney' -Enabled 1 -Name 'Emelia.Chaney' -AccountPassword (ConvertTo-SecureString 'Spring2005!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Shaylee.Griffith@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Shaylee' -Surname 'Griffith' -Enabled 1 -Name 'Shaylee.Griffith' -AccountPassword (ConvertTo-SecureString 'MaryJane13!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Rodney.Mullen@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Rodney' -Surname 'Mullen' -Enabled 1 -Name 'Rodney.Mullen' -AccountPassword (ConvertTo-SecureString 'GreatP@assword#'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Jaslyn.Casey@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Jaslyn' -Surname 'Casey' -Enabled 1 -Name 'Jaslyn.Casey' -AccountPassword (ConvertTo-SecureString 'LetMeInAlready!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Arely.Wu@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Arely' -Surname 'Wu' -Enabled 1 -Name 'Arely.Wu' -AccountPassword (ConvertTo-SecureString 'NoBodyKnowsItYet!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Niko.Byrd@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Niko' -Surname 'Byrd' -Enabled 1 -Name 'Niko.Byrd' -AccountPassword (ConvertTo-SecureString 'LostPassword2@'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Mitchell.Fernandez@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Mitchell' -Surname 'Fernandez' -Enabled 1 -Name 'Mitchell.Fernandez' -AccountPassword (ConvertTo-SecureString 'CorrectHorseBattery4'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Case.Wagner@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Case' -Surname 'Wagner' -Enabled 1 -Name 'Case.Wagner' -AccountPassword (ConvertTo-SecureString 'NegativeTractionUpHill3'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Kamari.Frazier@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Kamari' -Surname 'Frazier' -Enabled 1 -Name 'Kamari.Frazier' -AccountPassword (ConvertTo-SecureString 'Winter2022!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Kyson.Curry@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Kyson' -Surname 'Curry' -Enabled 1 -Name 'Kyson.Curry' -AccountPassword (ConvertTo-SecureString 'Summer2020!'  -AsPlainText -Force) 
+New-ADUser -UserPrincipalName 'Lilianna.Figueroa@dteclass.com' -Path 'ou=UserAccounts,dc=dteclass,dc=com' -GivenName 'Lilianna' -Surname 'Figueroa' -Enabled 1 -Name 'Lilianna.Figueroa' -AccountPassword (ConvertTo-SecureString 'LetsG000!'  -AsPlainText -Force)
+
+setspn -a SRV100/Braylen.Ewing.dteclass.com:1433 dteclass.com\Braylen.Ewing
+setspn -a SRV100/Emelia.Chaney.dteclass.com:1433 dteclass.com\Emelia.Chaney
+setspn -a SRV100/Shaylee.Griffith.dteclass.com:4000 dteclass.com\Shaylee.Griffith
+setspn -a SRV100/Rodney.Mullen.dteclass.com:674 dteclass.com\Rodney.Mullen
+setspn -a SRV100/Jaslyn.Casey.dteclass.com:333 dteclass.com\Jaslyn.Casey
+setspn -a SRV100/Arely.Wu.dteclass.com:4000 dteclass.com\Arely.Wu
+setspn -a SRV100/Niko.Byrd.dteclass.com:4000 dteclass.com\Niko.Byrd
+setspn -a SRV100/Mitchell.Fernandez.dteclass.com:2022 dteclass.com\Mitchell.Fernandez
+setspn -a SRV100/Case.Wagner.dteclass.com dteclass.com\Case.Wagner
+setspn -a SRV100/Kamari.Frazier.dteclass.com dteclass.com\Kamari.Frazier
+setspn -a SRV100/Kyson.Curry.dteclass.com:2352 dteclass.com\Kyson.Curry
+setspn -a SRV100/Lilianna.Figueroa.dteclass.com:1433 dteclass.com\Lilianna.Figueroa
